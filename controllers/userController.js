@@ -1,5 +1,5 @@
-export const join = (req, res) => res.send("Join");
-export const login = (req, res) => res.send("Login");
+export const join = (req, res) => res.render("join");
+export const login = (req, res) => res.render("login");
 export const logout = (req, res) => res.send("Logout");
 
 export const users = (req, res) => res.send("Users Home");
