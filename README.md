@@ -9,6 +9,7 @@
 | NodeJS     | v14.15.0 |
 | Express    | v4.17.1  |
 | babel/node | v7.12.6  |
+| MongoDB    | v4.4.2   |
 
 ## Pages:
 
