@@ -11,8 +11,6 @@ import routes from "./routes";
 
 const app = express();
 
-const handleHome = (req, res) => res.send("Hello From Home!");
-
 // Middleware 추가
 app.use(
     helmet({
