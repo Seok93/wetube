@@ -11,14 +11,14 @@ const config = {
     mode: MODE,
     module: {
         rules: [
-            // {
-            //     test: /\.(js)$/,
-            //     use: [
-            //         {
-            //             loader: "babel-loader",
-            //         },
-            //     ],
-            // },
+            {
+                test: /\.(js)$/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                    },
+                ],
+            },
             {
                 test: /\.(scss)$/,
                 use: [
