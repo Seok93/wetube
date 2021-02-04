@@ -4,6 +4,7 @@ const JOIN = "/join";
 const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
+const ME = "/me";
 
 // Github
 const GITHUB = "/auth/github";
@@ -40,6 +41,7 @@ const routes = {
     },
     editProfile: EDIT_PROFILE,
     changePassword: CHANGE_PASSWORD,
+    me: ME,
     videos: VIDEOS,
     upload: UPLOAD,
     videoDetail: (id) => {
