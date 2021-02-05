@@ -90,7 +90,29 @@ export const userDetail = async (req, res) => {
 };
 
 export const users = (req, res) => res.render("users", { pageTitle: "Users" });
-export const editProfile = (req, res) =>
+
+export const getEditProfile = (req, res) => {
     res.render("editProfile", { pageTitle: "Edit Profile" });
+};
+
+export const postEditProfile = async (req, res) => {
+    const {
+        user: { id, avatarUrl },
+        body: { name, email },
+        file,
+    } = req;
+
+    try {
+        await User.findByIdAndUpdate(id, {
+            name,
+            email,
+            avatarUrl: file ? file.path : avatarUrl,
+        });
+        res.redirect(routes.me);
+    } catch (error) {
+        res.render("editProfile", { pageTitle: "Edit Profile" });
+    }
+};
+
 export const changePassword = (req, res) =>
     res.render("changePassword", { pageTitle: "Change Password" });

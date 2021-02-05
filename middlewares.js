@@ -2,7 +2,10 @@ import multer from "multer";
 import routes from "./routes";
 
 const multerVideo = multer({ dest: "uploads/videos/" });
+const multerAvatar = multer({ dest: "uploads/avatars/" });
+
 export const uploadVideoMiddleware = multerVideo.single("videoFile");
+export const uploadAvatarMiddleware = multerAvatar.single("avatar");
 
 export const onlyPublic = (req, res, next) => {
     if (req.user) {
