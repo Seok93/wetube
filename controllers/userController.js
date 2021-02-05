@@ -77,7 +77,7 @@ export const getMe = (req, res) => {
     res.render("userDetail", { pageTitle: "User Detail", user: req.user });
 };
 
-export const userDetail = aync (req, res) => {
+export const userDetail = async (req, res) => {
     const {
         params: { id },
     } = req;
