@@ -68,7 +68,7 @@ function getCurrentTime() {
 
 function setTotalTime() {
     totalTime.innerHTML = formatDate(videoPlayer.duration);
-    videoPlayer.addEventListener("timeupdate", setCurrentTime);
+    videoPlayer.addEventListener("timeupdate", getCurrentTime);
 }
 
 function handleEnded() {
