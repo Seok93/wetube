@@ -118,5 +118,7 @@ dist
 package-lock.json
 
 # upload files
+package-lock.json
 uploads
 static
+build

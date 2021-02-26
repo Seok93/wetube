@@ -11,7 +11,9 @@ passport.use(
         {
             clientID: process.env.GITHUB_CLIENT_ID,
             clientSecret: process.env.GITHUB_CLIENT_SECRET,
-            callbackURL: `http://192.168.33.14:4000${routes.githubCallback}`,
+            callbackURL: process.env.PRODUCTION
+                ? `https://mysterious-savannah-73735.herokuapp.com${routes.githubCallback}`
+                : `http://192.168.33.14:4000${routes.githubCallback}`,
         },
         githubLoginCallback
     )
